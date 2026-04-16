@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
+    <title>Закрывающий тег — мой путь в вёрстке</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +13,208 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <!-- Символ дискеты для переиспользования -->
+    <svg style="display: none;">
+      <symbol id="diskette" viewBox="0 0 24 24">
+        <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h14V7h-4v4H7V5H5zm2 0v2h2V5H7zm8 0v6h-2V5h2z" />
+      </symbol>
+    </svg>
+
+    <header class="header content-width">
+      <div class="header__logo">&lt;/&gt;</div>
+      <h1 class="header__title">Закрывающий тег</h1>
+      <p class="header__date">среда, 6 апреля 2026</p>
+    </header>
+
+    <main class="main">
+      <ul class="card-list content-width">
+        <!-- Карточка 1 -->
+        <li class="card">
+          <h2 class="card__title">Старт: первый шаг</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-start" src="./images/photo1.jpg" alt="Дорога в неизвестность" loading="lazy" />
+            <p class="card__label">Начало пути</p>
+          </div>
+          <div class="card__description">
+            <p>Первый урок — и я уже чувствовала себя первооткрывателем. Казалось, что HTML и CSS — это магия, которую я никогда не осилю. Но каждый тег приближал к пониманию.</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 24 24" width="24" height="24">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  <path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  <path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/>
+                </g>
+                <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                  <path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </g>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
+              <span class="button__text">Like</span>
+            </button>
+            <button class="card__save-button button" type="button">
+              <svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg>
+              <span class="button__text">Сохранить на память</span>
+            </button>
+          </div>
+        </li>
+
+        <!-- Карточка 2 -->
+        <li class="card">
+          <h2 class="card__title">Сомнения: непонятный CSS</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-doubt" src="./images/photo2.jpg" alt="Туманный лес" loading="lazy" />
+            <p class="card__label">Сомнения</p>
+          </div>
+          <div class="card__description">
+            <p>Flexbox или Grid? Почему блоки едут? Первая серьёзная трудность — позиционирование. Казалось, что я никогда не научусь располагать элементы красиво.</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+
+        <!-- Карточка 3 -->
+        <li class="card">
+          <h2 class="card__title">Прорыв: поняла Grid</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-breakthrough" src="./images/photo3.jpg" alt="Горная вершина" loading="lazy" />
+            <p class="card__label">Прорыв</p>
+          </div>
+          <div class="card__description">
+            <p>Когда я освоила Grid и Flex, мир вёрстки открылся заново. Теперь я могла создавать сложные макеты без боли. Первый собственный проект — и он работал!</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+
+        <!-- Карточка 4 -->
+        <li class="card">
+          <h2 class="card__title">Усталость: ночной кодинг</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-fatigue" src="./images/photo4.jpg" alt="Ночной город" loading="lazy" />
+            <p class="card__label">Усталость</p>
+          </div>
+          <div class="card__description">
+            <p>Бывали моменты, когда хотелось всё бросить. Баги, неработающие анимации, путаница в JavaScript. Но каждая победа над ошибкой давала силы идти дальше.</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+
+        <!-- Карточка 5 -->
+        <li class="card">
+          <h2 class="card__title">Вдохновение: первый макет</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-inspiration" src="./images/photo5.jpg" alt="Рассвет над морем" loading="lazy" />
+            <p class="card__label">Вдохновение</p>
+          </div>
+          <div class="card__description">
+            <p>Когда я сверстала свой первый полноценный макет и увидела результат в браузере — это было невероятное чувство. Я поняла, что вёрстка — это искусство.</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+
+        <!-- Карточка 6 -->
+        <li class="card">
+          <h2 class="card__title">Битва: отладка и терпение</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-battle" src="./images/photo6.jpg" alt="Бурное море" loading="lazy" />
+            <p class="card__label">Битва</p>
+          </div>
+          <div class="card__description">
+            <p>Ошибки в JS, неправильные селекторы, конфликты стилей. Инструменты разработчика стали моим лучшим другом. Каждый исправленный баг — маленькая победа.</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+
+        <!-- Карточка 7 -->
+        <li class="card">
+          <h2 class="card__title">Финишная прямая</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-final" src="./images/photo7.jpg" alt="Финишная ленточка" loading="lazy" />
+            <p class="card__label">Почти финал</p>
+          </div>
+          <div class="card__description">
+            <p>Проект «Закрывающий тег» — итог всего, чему я научилась. Адаптив, анимации, модальные окна — всё это стало понятным и родным. Остался последний шаг.</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+
+        <!-- Карточка 8 -->
+        <li class="card">
+          <h2 class="card__title">Готово! Я — верстальщик</h2>
+          <div class="card__image-wrapper">
+            <img class="card__image filter-done" src="./images/photo8.jpg" alt="Улыбающийся человек за ноутбуком" loading="lazy" />
+            <p class="card__label">Успех</p>
+          </div>
+          <div class="card__description">
+            <p>Этот проект — мой маленький шедевр. Я прошла путь от новичка до человека, который может создать красивый, адаптивный и интерактивный сайт. Спасибо за уроки!</p>
+          </div>
+          <div class="card__buttons">
+            <button class="card__icon-button" type="button"><svg class="like-icon" viewBox="0 0 24 24" width="24" height="24"><g class="heart"><path class="contour" fill="var(--contour-color)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="main-body" fill="none" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path class="core" fill="none" d="M12 18.55l-1.07-.97C6.7 14.2 4 11.63 4 8.5 4 6.48 5.48 5 7.5 5c1.48 0 2.87.68 3.79 1.76L12 8l.71-.24C13.63 5.68 15.02 5 16.5 5 18.52 5 20 6.48 20 8.5c0 3.13-2.7 5.7-6.93 9.08L12 18.55z"/></g><g class="sparks" fill="var(--animation-fill-color)" opacity="0"><path d="M12 2v2M12 22v-2M2 12h2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></svg></button>
+            <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            <button class="card__save-button button" type="button"><svg class="button__icon" width="24" height="24"><use href="#diskette"></use></svg><span class="button__text">Сохранить на память</span></button>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <dialog class="modal" id="memory-dialog">
+      <div class="modal__container">
+        <div class="modal__icon">
+          <svg width="48" height="48"><use href="#diskette"></use></svg>
+        </div>
+        <div class="modal__content">
+          <p class="modal__text">Сохранить воспоминание на память?</p>
+          <button class="modal__close-button button" type="button">Ок</button>
+        </div>
+      </div>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
+    <script>
+      // Скрипт для модального окна
+      const saveButtons = document.querySelectorAll('.card__save-button');
+      const modal = document.getElementById('memory-dialog');
+      const closeModalBtn = modal?.querySelector('.modal__close-button');
+
+      if (modal && closeModalBtn) {
+        saveButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            modal.showModal();
+          });
+        });
+        closeModalBtn.addEventListener('click', () => {
+          modal.close();
+        });
+        // Закрытие по клику на фон
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) modal.close();
+        });
+      }
+    </script>
   </body>
 </html>
