@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -13,4 +12,312 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: var(--font-main);
+  font-variation-settings: 'wght' var(--font-weight-regular);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-width {
+  width: var(--content-width);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: var(--header-padding) 0;
+  margin-top: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(1.5rem, 5vw, 2.5rem);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.header__logo {
+  font-family: var(--font-accent);
+  font-size: clamp(0.75rem, 4vw, 1rem);
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-family: var(--font-accent);
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.header__date {
+  font-family: var(--font-accent);
+  font-size: clamp(0.7rem, 3vw, 0.875rem);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 1.125rem;
+  font-variation-settings: 'wght' var(--font-weight-bold);
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.card__image-wrapper {
+  position: relative;
+  border-bottom: 2px solid var(--accent-color);
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.card__label {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  color: var(--text-color);
+  background-color: transparent;
+  mix-blend-mode: hard-light;
+  text-transform: uppercase;
+  padding: 0.2rem 0.4rem;
+  z-index: 1;
+  text-stroke: 1px var(--label-stroke-color);
+  -webkit-text-stroke: 1px var(--label-stroke-color);
+}
+
+@supports not (text-stroke: 1px var(--label-stroke-color)) and not (-webkit-text-stroke: 1px var(--label-stroke-color)) {
+  .card__label {
+    text-shadow:
+      -1px -1px 0 var(--label-stroke-color),
+      1px -1px 0 var(--label-stroke-color),
+      -1px 1px 0 var(--label-stroke-color),
+      1px 1px 0 var(--label-stroke-color);
+  }
+}
+
+.card__description {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card__description p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 2px solid var(--accent-color);
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-accent);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover::after {
+  transform: translateX(0);
+}
+
+.button__text,
+.button__icon {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease, fill 0.3s ease;
+  mix-blend-mode: difference;
+  color: var(--text-color);
+  fill: var(--text-color);
+}
+
+.button:hover .button__text,
+.button:hover .button__icon {
+  color: var(--bg-color);
+  fill: var(--bg-color);
+}
+
+.card__icon-button {
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.modal {
+  border: none;
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid var(--accent-color);
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal[open] {
+  display: flex;
+}
+
+.modal__container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.modal__icon svg {
+  width: 48px;
+  height: 48px;
+  fill: var(--accent-color);
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.modal__text {
+  font-family: var(--font-accent);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.modal__close-button {
+  width: 100%;
+}
+
+/* Фильтры для изображений */
+.filter-start {
+  filter: brightness(1.1) contrast(1.2);
+}
+.filter-doubt {
+  filter: blur(2px);
+}
+.filter-breakthrough {
+  filter: grayscale(0.8);
+}
+.filter-fatigue {
+  filter: hue-rotate(90deg);
+}
+.filter-inspiration {
+  filter: saturate(1.8);
+}
+.filter-battle {
+  filter: sepia(0.6);
+}
+.filter-final {
+  filter: invert(0.1);
+}
+.filter-done {
+  filter: brightness(1.2) contrast(1.3) saturate(1.5);
+}
+
+@media (width <= 375px) {
+  .content-width {
+    width: 100%;
+    margin: 0;
+  }
+
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card__buttons {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+:root {
+  --bg-gradient: repeating-linear-gradient(90deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+                  repeating-linear-gradient(180deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+                  linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
 }
