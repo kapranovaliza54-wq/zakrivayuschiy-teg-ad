@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Шрифты */
+  --font-main: 'Inter', sans-serif;
+  --font-accent: 'PressStart2P', monospace;
+
+  /* Веса вариативного шрифта */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Цвета */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #000000;
+  --contour-color: #000000;
+  --animation-fill-color: #ff0000;
+  --label-stroke-color: #ffffff;
+  --button-hover-bg: #000000;
+
+  /* Размеры */
+  --content-width: clamp(375px, 100% - 40px, 696px);
+  --header-padding: clamp(1.5rem, 5vw, 2rem);
+  --card-gap: 2rem;
+}
